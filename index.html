@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#080e19">
-  <meta name="description" content="SuBZeRo is an independent developer building free, privacy-focused Android applications under the Q Apps family.">
+  <meta name="description" content="SuBZeRo is an independent Android developer building practical, free and privacy-focused applications.">
   <meta name="author" content="SuBZeRo">
   <meta name="robots" content="index, follow">
 
@@ -408,27 +408,30 @@
       animation: spin 60s linear infinite reverse;
     }
 
-    /* Full emblem viewport: no circular mask, crop or oversized image zoom. */
+    /* A simple developer monogram keeps the identity focused on SuBZeRo. */
     .orbit-core {
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 76%;
-      aspect-ratio: 1.2 / 1;
-      overflow: visible;
+      display: grid;
+      width: 31%;
+      aspect-ratio: 1;
+      place-items: center;
       transform: translate(-50%, -50%);
-      animation: logo-float 7s ease-in-out infinite;
-      isolation: isolate;
+      border: 1px solid rgba(207, 178, 122, .55);
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 28%, #1b2942, #0b1425 72%);
+      box-shadow: 0 0 54px rgba(207, 178, 122, .16), inset 0 0 28px rgba(207, 178, 122, .08);
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: clamp(64px, 9cqw, 104px);
+      line-height: 1;
+      animation: developer-mark-pulse 6s ease-in-out infinite;
       pointer-events: none;
     }
-    .orbit-core img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      max-width: none;
-      object-fit: contain;
-      object-position: center;
-      filter: drop-shadow(0 0 12px rgba(0, 150, 255, .2));
+    @keyframes developer-mark-pulse {
+      0%, 100% { box-shadow: 0 0 42px rgba(207, 178, 122, .14), inset 0 0 24px rgba(207, 178, 122, .06); }
+      50% { box-shadow: 0 0 68px rgba(207, 178, 122, .28), inset 0 0 32px rgba(207, 178, 122, .12); }
     }
     @keyframes logo-halo {
       0%, 100% { box-shadow: 0 0 42px rgba(0, 140, 255, .2), inset 0 0 24px rgba(0, 140, 255, .12); }
@@ -768,7 +771,7 @@
         opacity: 1 !important;
         transform: none !important;
       }
-      .orbit-core, .orbit-core::after { animation: none !important; }
+      .orbit-core { animation: none !important; }
     }
   </style>
 </head>
@@ -818,11 +821,11 @@
           </h1>
 
           <p class="hero-copy fade">
-            I’m an independent Android developer. My Q Apps respect your privacy, work offline and stay free to use.
+            I’m an independent Android developer. I build practical Android applications that respect your privacy, work offline and stay free to use.
           </p>
 
           <div class="cta fade">
-            <a class="button button-primary" href="#apps">Explore Q Apps</a>
+            <a class="button button-primary" href="#apps">Explore applications</a>
             <a class="button button-ghost" href="https://github.com/Dr-SuBZeRo" target="_blank" rel="noopener noreferrer">View GitHub</a>
           </div>
 
@@ -850,16 +853,16 @@
               <img src="https://raw.githubusercontent.com/Dr-SuBZeRo/WalletQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="" width="58" height="58" onerror="this.remove();this.parentElement.classList.add('show-fallback')">
             </div>
           </div>
-          <div class="orbit-core"><img src="/assets/q-apps-logo.svg?v=2" alt="Q Apps by SuBZeRo" width="600" height="500" loading="eager" decoding="async"></div>
+          <div class="orbit-core" aria-label="SuBZeRo developer mark">S</div>
         </div>
       </header>
     </div>
 
     <section id="apps" aria-labelledby="apps-heading">
       <div class="wrap">
-        <h2 class="reveal" id="apps-heading">Meet the Q Apps.</h2>
+        <h2 class="reveal" id="apps-heading">Selected applications.</h2>
         <p class="lede reveal">
-          Focused tools for everyday work and life. Three independent projects, built around practical needs and thoughtful design.
+          Independent Android applications built around practical needs, thoughtful design and dependable engineering.
         </p>
 
         <div class="apps">
@@ -950,7 +953,7 @@
         <div class="about-copy reveal">
           <h2 id="about-heading">Built independently. Made for real use.</h2>
           <p>
-            I’m SuBZeRo, an independent developer building a focused family of Android apps called Q Apps. I work on practical problems, clean interfaces and dependable engineering. Source code, issues and development updates are shared publicly on GitHub.
+            I’m SuBZeRo, an independent Android developer. I build practical applications with clean interfaces, privacy-conscious engineering and a focus on real-world usefulness. Source code, issues and development updates are shared publicly on GitHub.
           </p>
         </div>
       </div>
@@ -969,7 +972,7 @@
 
   <footer>
     <div class="wrap footer-inner">
-      <span>© 2026 SuBZeRo. Independent developer, Q Apps.</span>
+      <span>© 2026 SuBZeRo. Independent Android developer.</span>
       <div class="footer-links">
         <a href="https://github.com/Dr-SuBZeRo" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="/privacy.html">Privacy</a>
