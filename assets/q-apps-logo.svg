@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="90 140 840 700" role="img" aria-labelledby="title desc">
   <title id="title">Q Apps by SuBZeRo</title>
-  <desc id="desc">A silver and electric-blue Q emblem with code brackets and an orbital swoosh, centered on a deep navy background.</desc>
+  <desc id="desc">The complete silver and electric-blue Q Apps emblem with code brackets and an orbital swoosh.</desc>
   <style>
     .orbit-track {
       transform-box: view-box;
@@ -49,7 +49,6 @@
     <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="12" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur in="SourceAlpha" stdDeviation="13"/><feOffset dy="13"/><feComponentTransfer><feFuncA type="linear" slope=".45"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
-  <rect width="1024" height="1024" fill="url(#bg)"/>
   <!-- orbital sweep behind the emblem -->
   <g class="orbit-track">
     <path d="M205 570 C112 538 147 456 282 386 C421 314 615 293 779 348 C861 375 891 418 849 466" fill="none" stroke="#006cff" stroke-width="28" opacity=".18" filter="url(#glow)"/>
