@@ -69,7 +69,8 @@
     .nav{position:fixed;inset:0 0 auto;z-index:50;border-bottom:1px solid var(--line);background:rgba(8,13,24,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
     .nav-inner{height:var(--nav);display:flex;align-items:center;justify-content:space-between}
     .brand{display:inline-flex;align-items:center;gap:12px;font:800 19px var(--display);letter-spacing:-.045em}
-    .brand-mark{display:grid;width:38px;height:38px;place-items:center;border:1px solid rgba(72,215,232,.36);border-radius:12px;background:linear-gradient(145deg,rgba(72,215,232,.16),rgba(85,167,255,.04));color:#d9faff;font:700 23px Georgia,serif;box-shadow:0 0 24px rgba(72,215,232,.1)}
+    .brand-mark{display:block;width:42px;height:42px;flex:0 0 42px;padding:2px;overflow:hidden;border:1px solid rgba(72,215,232,.48);border-radius:13px;background:linear-gradient(145deg,rgba(72,215,232,.2),rgba(85,167,255,.06));box-shadow:0 0 24px rgba(72,215,232,.1)}
+    .brand-mark img{display:block;width:100%;height:100%;border-radius:10px;object-fit:cover}
     .brand small{display:block;margin-top:-2px;color:var(--muted);font:400 9px var(--mono);letter-spacing:.12em}
     .nav-links{display:flex;align-items:center;gap:32px;list-style:none;color:var(--soft);font-size:13px}
     .nav-links a{transition:color .2s}.nav-links a:hover{color:var(--cyan)}
@@ -113,7 +114,7 @@
     .orbit-apps .orbit-node.two{top:80%;left:5%;transform:translate(-50%,-50%)}
     .orbit-apps .orbit-node.three{top:80%;left:95%;transform:translate(-50%,-50%)}
     .orbit-core{position:relative;z-index:3;width:148px;height:148px;display:grid;place-items:center;border:1px solid rgba(72,215,232,.42);border-radius:42px;background:radial-gradient(circle at 35% 25%,#1b3b56,#0b1729 68%);box-shadow:0 0 0 12px rgba(72,215,232,.035),0 0 80px rgba(72,215,232,.15),inset 0 0 32px rgba(72,215,232,.1);animation:core-float 6s ease-in-out infinite}
-    .orbit-core span{font:500 96px/.9 Georgia,serif;color:#e7faff;text-shadow:0 0 30px rgba(72,215,232,.4)}
+    .orbit-core img{display:block;width:100%;height:100%;padding:7px;border-radius:inherit;object-fit:cover}
     .core-caption{position:absolute;bottom:calc(50% - 112px);left:50%;transform:translateX(-50%);white-space:nowrap;color:#8ca9c3;font:10px var(--mono);letter-spacing:.2em}
     @keyframes core-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
     .visual-label{position:absolute;z-index:4;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:rgba(12,24,40,.85);color:#b6c8dc;font:10px var(--mono);backdrop-filter:blur(12px)}
@@ -242,7 +243,7 @@
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="#top" aria-label="SuBZeRo home">
-        <span class="brand-mark">S</span><span>SuBZeRo<small>INDEPENDENT DEVELOPER</small></span>
+        <span class="brand-mark"><img src="https://avatars.githubusercontent.com/u/136808934?v=4" alt="SuBZeRo profile picture" width="42" height="42"></span><span>SuBZeRo<small>INDEPENDENT DEVELOPER</small></span>
       </a>
       <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links">☰</button>
       <nav aria-label="Main navigation">
@@ -280,7 +281,7 @@
             <div class="orbit-node two"><img src="https://raw.githubusercontent.com/Dr-SuBZeRo/CashQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="CashQ app icon" width="72" height="72"></div>
             <div class="orbit-node three"><img src="https://raw.githubusercontent.com/Dr-SuBZeRo/WalletQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="WalletQ app icon" width="72" height="72"></div>
           </div>
-          <div class="orbit-core"><span>S</span></div>
+          <div class="orbit-core"><img src="https://avatars.githubusercontent.com/u/136808934?v=4" alt="SuBZeRo profile picture" width="148" height="148"></div>
           <div class="core-caption">DESIGN · BUILD · REFINE</div>
           <div class="visual-label label-a"><strong>3</strong> independent projects</div>
           <div class="visual-label label-b">PRIVACY <strong>●</strong> BY DESIGN</div>
