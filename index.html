@@ -400,51 +400,35 @@
       animation: spin 60s linear infinite reverse;
     }
 
+    /* Full emblem viewport: no circular mask, crop or oversized image zoom. */
     .orbit-core {
       position: absolute;
-      inset: 34%;
-      overflow: hidden;
-      border: 1px solid rgba(90, 170, 255, .55);
-      border-radius: 50%;
-      background: #03132f;
-      box-shadow: 0 0 42px rgba(0, 140, 255, .24), inset 0 0 28px rgba(0, 140, 255, .16);
-      animation: logo-float 6.5s ease-in-out infinite, logo-halo 5s ease-in-out infinite;
+      top: 50%;
+      left: 50%;
+      width: 76%;
+      aspect-ratio: 1.2 / 1;
+      overflow: visible;
+      transform: translate(-50%, -50%);
+      animation: logo-float 7s ease-in-out infinite;
       isolation: isolate;
-    }
-    .orbit-core::after {
-      position: absolute;
-      z-index: 2;
-      inset: 0;
-      border-radius: inherit;
-      background: linear-gradient(112deg, transparent 30%, rgba(130, 231, 255, .16) 47%, rgba(255,255,255,.3) 50%, transparent 57%);
-      content: "";
       pointer-events: none;
-      transform: translateX(-125%);
-      animation: logo-sheen 8s ease-in-out infinite;
     }
     .orbit-core img {
-      position: absolute;
-      top: -25%;
-      left: -25%;
       display: block;
-      width: 150%;
-      height: 150%;
+      width: 100%;
+      height: 100%;
       max-width: none;
-      border-radius: 0;
       object-fit: contain;
+      object-position: center;
+      filter: drop-shadow(0 0 12px rgba(0, 150, 255, .2));
     }
     @keyframes logo-halo {
       0%, 100% { box-shadow: 0 0 42px rgba(0, 140, 255, .2), inset 0 0 24px rgba(0, 140, 255, .12); }
       50% { box-shadow: 0 0 64px rgba(0, 190, 255, .36), inset 0 0 36px rgba(0, 140, 255, .2); }
     }
     @keyframes logo-float {
-      0%, 100% { transform: translateY(0) scale(.985); }
-      50% { transform: translateY(-4px) scale(1.015); }
-    }
-    @keyframes logo-sheen {
-      0%, 68% { transform: translateX(-125%); opacity: 0; }
-      76% { opacity: .9; }
-      90%, 100% { transform: translateX(125%); opacity: 0; }
+      0%, 100% { transform: translate(-50%, -50%) translateY(0) scale(.99); }
+      50% { transform: translate(-50%, -50%) translateY(-3px) scale(1.01); }
     }
 
     /* Shared sections */
@@ -858,7 +842,7 @@
               <img src="https://raw.githubusercontent.com/Dr-SuBZeRo/WalletQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="" width="58" height="58" onerror="this.remove();this.parentElement.classList.add('show-fallback')">
             </div>
           </div>
-          <div class="orbit-core"><img src="/assets/q-apps-logo.svg" alt="Q Apps by SuBZeRo" width="140" height="140" loading="eager" decoding="async"></div>
+          <div class="orbit-core"><img src="/assets/q-apps-logo.svg?v=2" alt="Q Apps by SuBZeRo" width="600" height="500" loading="eager" decoding="async"></div>
         </div>
       </header>
     </div>
