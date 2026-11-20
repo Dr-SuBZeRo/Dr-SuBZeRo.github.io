@@ -204,7 +204,10 @@
       .nav-links.open{display:flex;flex-direction:column}
       .nav-links a{display:block;padding:13px 4px}
       .nav-cta{margin-top:8px;text-align:center}
-      .menu-toggle{display:grid;place-items:center}
+      /* Keep the menu trigger flush with the right edge of the same header container. */
+      .nav-inner{position:relative}
+      .nav-inner>nav{width:0;height:0;flex:0 0 0}
+      .menu-toggle{display:grid;flex:0 0 44px;margin-left:auto;place-items:center}
       .hero{grid-template-columns:1fr;gap:30px;min-height:0;padding:calc(var(--nav) + 74px) 0 70px}
       .hero h1{font-size:clamp(46px,11vw,70px)}
       .hero-description{font-size:15px}
