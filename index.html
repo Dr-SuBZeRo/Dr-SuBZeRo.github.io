@@ -98,7 +98,7 @@
     .hero-meta span{display:flex;align-items:center;gap:8px}
     .hero-meta b{color:var(--cyan);font-weight:400}
     /* Animated system illustration */
-    .visual{position:relative;min-width:0;aspect-ratio:1/1;display:grid;place-items:center;isolation:isolate}
+    .visual{position:relative;min-width:0;aspect-ratio:1/1;display:grid;place-items:center;isolation:isolate;container-type:inline-size}
     .visual::before{position:absolute;inset:9%;border:1px solid rgba(94,170,220,.12);border-radius:50%;content:"";box-shadow:0 0 100px rgba(31,124,191,.08),inset 0 0 80px rgba(31,124,191,.04)}
     .visual::after{position:absolute;inset:20%;border:1px dashed rgba(94,170,220,.19);border-radius:50%;content:"";animation:rotate 70s linear infinite}
     @keyframes rotate{to{transform:rotate(360deg)}}
