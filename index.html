@@ -397,16 +397,18 @@
     .orbit-core {
       position: absolute;
       inset: 34%;
-      display: grid;
-      place-items: center;
-      border: 1px solid rgba(207, 178, 122, .4);
+      overflow: hidden;
+      border: 1px solid rgba(90, 170, 255, .55);
       border-radius: 50%;
-      background: radial-gradient(circle at 35% 30%, #1b2842, var(--ink));
-      box-shadow: 0 0 80px rgba(207, 178, 122, .18), inset 0 0 40px rgba(207, 178, 122, .08);
-      color: var(--gold);
-      font-family: var(--serif);
-      font-size: clamp(64px, 9vw, 104px);
+      background: #03132f;
+      box-shadow: 0 0 80px rgba(0, 140, 255, .2), inset 0 0 36px rgba(0, 140, 255, .12);
       animation: breathe 6s ease-in-out infinite;
+    }
+    .orbit-core img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     /* Shared sections */
@@ -801,7 +803,7 @@
               <img src="https://raw.githubusercontent.com/Dr-SuBZeRo/WalletQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="" width="58" height="58" onerror="this.remove()">
             </div>
           </div>
-          <div class="orbit-core">Q</div>
+          <div class="orbit-core"><img src="/assets/q-apps-logo.svg" alt="Q Apps by SuBZeRo" width="140" height="140" loading="eager" decoding="async"></div>
         </div>
       </header>
     </div>
