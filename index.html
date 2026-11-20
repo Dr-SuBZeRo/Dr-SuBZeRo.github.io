@@ -403,50 +403,48 @@
     .orbit-core {
       position: absolute;
       inset: 34%;
-      overflow: visible;
+      overflow: hidden;
       border: 1px solid rgba(90, 170, 255, .55);
       border-radius: 50%;
       background: #03132f;
-      box-shadow: 0 0 80px rgba(0, 140, 255, .2), inset 0 0 36px rgba(0, 140, 255, .12);
-      animation: breathe 6s ease-in-out infinite;
+      box-shadow: 0 0 42px rgba(0, 140, 255, .24), inset 0 0 28px rgba(0, 140, 255, .16);
+      animation: logo-float 6.5s ease-in-out infinite, logo-halo 5s ease-in-out infinite;
       isolation: isolate;
-    }
-    .orbit-core::before {
-      position: absolute;
-      z-index: -1;
-      inset: -11%;
-      border: 1px solid rgba(0, 210, 255, .55);
-      border-right-color: transparent;
-      border-bottom-color: rgba(0, 125, 255, .15);
-      border-radius: 50%;
-      content: "";
-      animation: logo-orbit 12s linear infinite;
     }
     .orbit-core::after {
       position: absolute;
-      z-index: -2;
-      inset: -20%;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(0, 153, 255, .18), transparent 68%);
+      z-index: 2;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(112deg, transparent 30%, rgba(130, 231, 255, .16) 47%, rgba(255,255,255,.3) 50%, transparent 57%);
       content: "";
-      animation: logo-halo 4s ease-in-out infinite;
+      pointer-events: none;
+      transform: translateX(-125%);
+      animation: logo-sheen 8s ease-in-out infinite;
     }
     .orbit-core img {
+      position: absolute;
+      top: -25%;
+      left: -25%;
       display: block;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      animation: logo-float 5s ease-in-out infinite;
-      transform-origin: center;
+      width: 150%;
+      height: 150%;
+      max-width: none;
+      border-radius: 0;
+      object-fit: contain;
     }
-    @keyframes logo-orbit { to { transform: rotate(360deg); } }
     @keyframes logo-halo {
-      50% { opacity: .55; transform: scale(1.12); }
+      0%, 100% { box-shadow: 0 0 42px rgba(0, 140, 255, .2), inset 0 0 24px rgba(0, 140, 255, .12); }
+      50% { box-shadow: 0 0 64px rgba(0, 190, 255, .36), inset 0 0 36px rgba(0, 140, 255, .2); }
     }
     @keyframes logo-float {
-      0%, 100% { transform: scale(.97); }
-      50% { transform: scale(1.035); }
+      0%, 100% { transform: translateY(0) scale(.985); }
+      50% { transform: translateY(-4px) scale(1.015); }
+    }
+    @keyframes logo-sheen {
+      0%, 68% { transform: translateX(-125%); opacity: 0; }
+      76% { opacity: .9; }
+      90%, 100% { transform: translateX(125%); opacity: 0; }
     }
 
     /* Shared sections */
@@ -778,6 +776,7 @@
         opacity: 1 !important;
         transform: none !important;
       }
+      .orbit-core, .orbit-core::after { animation: none !important; }
     }
   </style>
 </head>
