@@ -143,13 +143,34 @@
       letter-spacing: .01em;
     }
 
-    .brand-mark {
-      width: 8px;
-      height: 8px;
-      flex: 0 0 8px;
+    .brand-avatar {
+      position: relative;
+      display: block;
+      width: 36px;
+      height: 36px;
+      flex: 0 0 36px;
+      overflow: hidden;
+      border: 1px solid rgba(207, 178, 122, .65);
       border-radius: 50%;
-      background: var(--gold);
-      box-shadow: 0 0 14px var(--gold);
+      background: var(--ink);
+      box-shadow: 0 0 16px rgba(207, 178, 122, .12);
+    }
+
+    .brand-avatar img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .brand-avatar-fallback {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 21px;
     }
 
     .nav-links {
@@ -313,6 +334,7 @@
       width: min(100%, 430px);
       aspect-ratio: 1;
       margin: 0 auto;
+      container-type: inline-size;
       animation-delay: .5s;
     }
 
@@ -335,18 +357,20 @@
     }
 
     .satellite {
+      --satellite-size: clamp(46px, 13.5cqw, 58px);
+      --satellite-distance: 36cqw;
       position: absolute;
       top: 50%;
       left: 50%;
       display: grid;
-      width: 58px;
-      height: 58px;
+      width: var(--satellite-size);
+      height: var(--satellite-size);
       place-items: center;
       overflow: hidden;
-      margin: -29px;
-      transform: rotate(var(--angle)) translateY(calc(var(--distance) * -1)) rotate(calc(var(--angle) * -1));
+      margin: calc(var(--satellite-size) / -2);
+      transform: rotate(var(--angle)) translateY(calc(var(--satellite-distance) * -1)) rotate(calc(var(--angle) * -1));
       border: 1px solid var(--line);
-      border-radius: 17px;
+      border-radius: clamp(12px, 4cqw, 17px);
       background: var(--ink);
       box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
     }
@@ -708,7 +732,10 @@
   <nav class="site-nav" aria-label="Primary navigation">
     <div class="wrap nav-inner">
       <a class="brand" href="#top" aria-label="SuBZeRo home">
-        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-avatar" aria-hidden="true">
+          <span class="brand-avatar-fallback">S</span>
+          <img src="https://avatars.githubusercontent.com/u/136808934?v=4" alt="" width="36" height="36" decoding="async" onerror="this.remove()">
+        </span>
         SuBZeRo
       </a>
 
@@ -761,15 +788,15 @@
           <div class="orbit-ring"></div>
           <div class="orbit-ring orbit-ring-inner"></div>
           <div class="orbit-spin">
-            <div class="satellite" style="--angle: 0deg; --distance: 186px">
+            <div class="satellite" style="--angle: 0deg">
               <span>M</span>
               <img src="https://raw.githubusercontent.com/Dr-SuBZeRo/MargiQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="" width="58" height="58" onerror="this.remove()">
             </div>
-            <div class="satellite" style="--angle: 120deg; --distance: 186px">
+            <div class="satellite" style="--angle: 120deg">
               <span>C</span>
               <img src="https://raw.githubusercontent.com/Dr-SuBZeRo/CashQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="" width="58" height="58" onerror="this.remove()">
             </div>
-            <div class="satellite" style="--angle: 240deg; --distance: 186px">
+            <div class="satellite" style="--angle: 240deg">
               <span>W</span>
               <img src="https://raw.githubusercontent.com/Dr-SuBZeRo/WalletQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="" width="58" height="58" onerror="this.remove()">
             </div>
