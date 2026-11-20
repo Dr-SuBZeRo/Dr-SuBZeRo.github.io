@@ -1,113 +1,251 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#080e19">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SuBZeRo — Independent Android Developer</title>
 <meta name="description" content="SuBZeRo is an independent developer building free, privacy-focused Android applications under the Q Apps family.">
 <meta property="og:title" content="SuBZeRo — Independent Android Developer">
 <meta property="og:description" content="Thoughtful software. Private by design. Free for everyone.">
 <meta property="og:image" content="assets/social-preview.svg">
-<title>SuBZeRo — Independent Android Developer</title>
-<link rel="icon" href="https://avatars.githubusercontent.com/u/136808934?v=4" type="image/png"><link rel="apple-touch-icon" href="https://avatars.githubusercontent.com/u/136808934?v=4">
+<meta name="theme-color" content="#080e19">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
-:root{color-scheme:dark;--bg:#080e19;--panel:#101d30;--line:rgba(160,184,212,.15);--text:#edf4fc;--muted:#9aabc0;--blue:#5da9ff;--cyan:#54d4d0;--max:1160px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}.container{width:min(var(--max),calc(100% - 48px));margin:auto}.header{position:sticky;top:0;z-index:5;background:#080e19eF;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.03em}.mark{display:block;width:40px;height:40px;border:1px solid #5da9ff88;border-radius:12px;background:#0d1a2a;object-fit:cover}.mark b{color:var(--cyan)}.brand small{display:block;color:var(--muted);font:10px monospace;letter-spacing:.22em}.links{display:flex;align-items:center;gap:30px;font-size:13px;color:#c1cede;font-weight:650}.links a:hover,.link:hover{color:var(--cyan)}.pill{border:1px solid var(--line);padding:8px 14px;border-radius:8px}.hero{padding:105px 0 55px;background:radial-gradient(ellipse at 78% 35%,#1b5b922b,transparent 40%),linear-gradient(#0a1423,#080e19)}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:35px;min-height:410px}.eyebrow{font:11px monospace;letter-spacing:.17em;color:#8ca8c5}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan);margin-right:9px}.hero h1{font-size:clamp(46px,6vw,76px);line-height:1.08;letter-spacing:-.065em;margin:24px 0}.gradient{background:linear-gradient(100deg,#8ac5ff,#5da9ff 48%,#63ddd2);background-clip:text;color:transparent}.lede{max-width:590px;color:#aebdd0;font-size:17px;line-height:1.85}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;gap:12px;align-items:center;padding:13px 19px;border-radius:9px;font-size:13px;font-weight:800}.primary{background:linear-gradient(105deg,#3d8ce8,#39b8b4);color:#06121e}.secondary{border:1px solid #a1beda40;color:#dce9f8}.art{height:380px;display:grid;place-items:center;position:relative}.orbit{position:absolute;width:330px;height:260px;border:1px solid #6eb2e033;border-radius:50%;transform:rotate(-25deg)}.orbit:after{content:"";position:absolute;inset:-28px 38px;border:1px solid #54d4d022;border-radius:50%;transform:rotate(65deg)}.monogram{display:grid;place-items:center;width:205px;height:205px;border:1px solid #87c1ef77;border-radius:48px;transform:rotate(-8deg);background:linear-gradient(145deg,#1d4163c7,#081422);box-shadow:0 35px 100px #0008,inset 0 0 45px #5da9ff1f;font-size:112px;font-weight:850}.monogram span{color:var(--cyan);font-size:40px}.chip{position:absolute;padding:10px 14px;border:1px solid #99c0e038;border-radius:9px;background:#0d1c2ee8;color:#c5d8ea;font:11px monospace}.top{top:55px;right:0}.bottom{bottom:50px;left:0}.note{margin-top:34px;color:#8093aa;font:10px monospace;letter-spacing:.04em}.section{padding:95px 0}.dark{background:#0a111e}.heading{display:flex;justify-content:space-between;align-items:end;gap:35px;margin-bottom:40px}.heading h2,.about h2{font-size:clamp(34px,4vw,48px);line-height:1.15;letter-spacing:-.055em;margin:12px 0 0}.heading p{max-width:420px;color:var(--muted);font-size:14px;margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:24px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,#111f32,#0b1421);min-height:275px;display:flex;flex-direction:column}.card.feature{border-color:#5da9ff55;background:linear-gradient(145deg,#173653,#0b1421)}.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.appicon{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(145deg,#82c4ff,#48c9c1);color:#081321;font-weight:850;font-size:19px}.appicon-image{display:block;object-fit:cover;padding:0;background:transparent;border:1px solid #ffffff22}.cash{background:linear-gradient(145deg,#a8e2ca,#51b990)}.stock{background:linear-gradient(145deg,#f0c978,#dc9650)}.clinic{background:linear-gradient(145deg,#9fcaff,#588dd4)}.wallet{background:linear-gradient(145deg,#d0b5ff,#8d72d7)}.status{font:9px monospace;text-transform:uppercase;letter-spacing:.06em;padding:5px 8px;border-radius:5px;color:#b5c1d0;background:#97abc11a}.testing{color:#9bd6ff;background:#5da9ff1f}.card h3{margin:0;font-size:21px}.tagline{font-size:11px;color:var(--cyan);margin:2px 0 12px}.desc{font-size:12px;color:#9eafc3;line-height:1.8;margin:0 0 18px}.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;margin-bottom:16px}.tags span{font:9px monospace;color:#8297b0;border:1px solid #8fa9c529;padding:4px 7px;border-radius:4px}.link{font-size:11px;font-weight:800;color:#a9d2ff}.footnote{font-size:10px;color:#71849c;margin-top:20px}.principles{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:14px;overflow:hidden}.principle{padding:26px 22px;min-height:220px;background:#0e192980;border-right:1px solid var(--line)}.principle:last-child{border:0}.num{font:10px monospace;color:#657e99}.symbol{font-size:27px;color:var(--cyan);margin:23px 0 10px}.principle h3{font-size:15px;margin:0 0 8px}.principle p,.about p{font-size:12px;color:#91a3b8;line-height:1.85;margin:0}.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:75px;align-items:center}.about-art{height:280px;display:grid;place-items:center;position:relative}.about-art .monogram{width:175px;height:175px;font-size:95px}.about-avatar{width:156px;height:156px;object-fit:cover;border-radius:36px;border:1px solid #87c1ef77;box-shadow:0 35px 100px #0008}.about-ring{position:absolute;width:255px;height:255px;border:1px solid #54d4d033;border-radius:50%}.about h2{margin:12px 0 20px}.about p{font-size:13px;margin:12px 0;max-width:610px}.contact{padding:0 0 90px}.contact-box{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:36px 40px;border:1px solid #5da9ff38;border-radius:15px;background:radial-gradient(ellipse at 80% 0%,#3f9bb62e,transparent 45%),linear-gradient(110deg,#142b45,#102438)}.contact-box h2{margin:10px 0 4px;font-size:25px}.contact-box p{margin:0;color:#9fb2c7;font-size:12px}.light{background:#e7f3ff;color:#0a1928}.footer{border-top:1px solid var(--line);background:#070c14}.footer-main{display:flex;align-items:center;gap:25px;padding:28px 0}.footer-main p{margin:0 auto 0 0;color:#8294aa;font-size:11px}.footer-links{display:flex;gap:20px;font-size:11px;color:#a8b9cd}.footer-bottom{border-top:1px solid var(--line);display:flex;justify-content:space-between;padding:15px 0 20px;color:#64778e;font:9px monospace}.menu{display:none}
-@media(max-width:850px){.cards{grid-template-columns:repeat(2,1fr)}.principles{grid-template-columns:repeat(2,1fr)}.principle:nth-child(2){border-right:0}.principle:nth-child(-n+2){border-bottom:1px solid var(--line)}.about-grid{gap:35px}}
-@media(max-width:650px){.container{width:calc(100% - 34px)}.hero{padding:65px 0 45px}.hero-grid{grid-template-columns:1fr}.hero h1{font-size:clamp(43px,12vw,62px)}.lede{font-size:15px}.art{height:285px;margin-top:0}.monogram{width:170px;height:170px;font-size:90px}.top{top:20px;right:0}.bottom{bottom:25px;left:0}.section{padding:72px 0}.heading{display:block}.heading p{margin-top:16px}.cards,.principles{grid-template-columns:1fr}.card{min-height:255px}.principle{min-height:0;border-right:0;border-bottom:1px solid var(--line)!important;padding:22px}.principle:last-child{border-bottom:0!important}.symbol{margin:13px 0 8px}.about-grid{grid-template-columns:1fr;gap:20px}.about-art{height:210px}.about-art .monogram{width:140px;height:140px;font-size:78px}.about-avatar{width:130px;height:130px;border-radius:30px}.about-ring{width:205px;height:205px}.contact-box{display:block;padding:28px 23px}.contact-box .btn{margin-top:22px}.footer-main{flex-wrap:wrap}.footer-main p{order:3;flex-basis:100%}.footer-links{margin-left:auto}.footer-bottom{flex-direction:column;gap:8px}.links{gap:14px;font-size:12px}}
-/* Mobile readability and touch-target refinements */
-@media(max-width:650px){
-  body{font-size:16px;line-height:1.7}
-  .container{width:calc(100% - 36px)}
-  .nav{height:72px}
-  .brand{gap:9px;font-size:15px}
-  .mark{width:42px;height:42px;border-radius:12px}
-  .brand small{font-size:9px;letter-spacing:.2em}
-  .links{gap:10px;font-size:11px}
-  .links .pill{padding:7px 9px;border-radius:8px}
-  .hero{padding:62px 0 42px}
-  .hero h1{font-size:clamp(42px,11.2vw,58px);line-height:1.08;letter-spacing:-.06em;margin:20px 0}
-  .eyebrow{font-size:10px;letter-spacing:.15em}
-  .lede{font-size:16px;line-height:1.8}
-  .actions{gap:10px;margin-top:24px}
-  .btn{min-height:48px;padding:13px 16px;font-size:13px}
-  .note{font-size:10px;line-height:1.7;letter-spacing:.035em;margin-top:26px}
-  .art{height:270px;margin-top:8px}
-  .monogram{width:164px;height:164px;border-radius:40px;font-size:88px}
-  .chip{font-size:11px;padding:9px 12px}
-  .top{top:16px}.bottom{bottom:18px}
-  .section{padding:66px 0}
-  .heading{margin-bottom:28px}
-  .heading h2,.about h2{font-size:clamp(32px,8.5vw,40px);line-height:1.14}
-  .heading p{font-size:15px;line-height:1.75;margin-top:14px}
-  .cards{gap:15px}
-  .card{padding:22px;border-radius:15px;min-height:0}
-  .card-top{margin-bottom:18px;min-height:56px}
-  .appicon{width:56px;height:56px;border-radius:15px;font-size:22px}
-  .card h3{font-size:23px;line-height:1.25}
-  .tagline{font-size:13px;line-height:1.55;margin:5px 0 12px}
-  .desc{font-size:14px;line-height:1.75;margin-bottom:18px}
-  .tags{gap:7px;margin-bottom:17px}
-  .tags span{font-size:10px;padding:5px 8px}
-  .link{font-size:13px;line-height:1.5}
-  .status{font-size:9px;padding:6px 9px;letter-spacing:.05em}
-  .footnote{font-size:11px;line-height:1.7;margin-top:17px}
-  .principles{border-radius:15px}
-  .principle{padding:23px 21px}
-  .num{font-size:11px}
-  .symbol{font-size:28px;margin:15px 0 9px}
-  .principle h3{font-size:17px;margin-bottom:8px}
-  .principle p,.about p{font-size:14px;line-height:1.75}
-  .about-grid{gap:22px}
-  .about-art{height:200px}
-  .about-avatar{width:136px;height:136px;border-radius:31px}
-  .about-ring{width:205px;height:205px}
-  .about h2{margin:10px 0 17px}
-  .about p{margin:13px 0}
-  .contact{padding:0 0 68px}
-  .contact-box{padding:26px 22px;border-radius:15px}
-  .contact-box h2{font-size:23px;line-height:1.25;margin:11px 0 8px}
-  .contact-box p{font-size:14px;line-height:1.7}
-  .contact-box .btn{margin-top:20px}
-  .footer-main{gap:16px;padding:25px 0}
-  .footer-main p{font-size:12px;line-height:1.7}
-  .footer-links{font-size:12px;gap:17px}
-  .footer-bottom{font-size:10px;line-height:1.6}
+:root{
+  --bg:#080e19; --ink:#0e1626; --line:rgba(243,239,230,.12);
+  --text:#f3efe6; --mist:#9aa4b8; --gold:#cfb27a; --gold-soft:rgba(207,178,122,.14);
+  --serif:"Instrument Serif","Cormorant Garamond",Georgia,serif;
+  --sans:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
-@media(max-width:390px){
-  .container{width:calc(100% - 30px)}
-  .brand{font-size:14px;gap:7px}
-  .mark{width:38px;height:38px}
-  .links{gap:7px;font-size:10px}
-  .links .pill{padding:6px 7px}
-  .hero h1{font-size:42px}
-  .card{padding:19px}
-  .card-top{gap:8px}
-  .status{font-size:8px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:4px}
+.glow{position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(520px circle at var(--x,70%) var(--y,20%),rgba(207,178,122,.09),transparent 60%)}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.wrap{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:10;padding-top:env(safe-area-inset-top,0px);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(8,14,25,.55);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{font-family:var(--serif);font-size:24px;letter-spacing:.01em;display:flex;align-items:center;gap:10px}
+.brand i{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 14px var(--gold)}
+nav ul{display:flex;gap:clamp(16px,3vw,36px);list-style:none;font-size:14px;color:var(--mist)}
+nav ul a{transition:color .3s}nav ul a:hover{color:var(--text)}
+
+/* hero */
+.hero{min-height:100svh;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:40px;padding:120px 0 80px}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(46px,7.4vw,104px);line-height:.98;letter-spacing:-.02em}
+.hero h1 span{display:block;overflow:hidden}
+.hero h1 span b{display:block;font-weight:400;transform:translateY(105%);animation:rise 1.3s cubic-bezier(.16,1,.3,1) forwards}
+.hero h1 span:nth-child(2) b{animation-delay:.14s;font-style:italic;color:var(--gold)}
+.hero h1 span:nth-child(3) b{animation-delay:.28s}
+@keyframes rise{to{transform:none}}
+.fade{opacity:0;animation:fade 1.4s ease forwards}
+@keyframes fade{to{opacity:1}}
+.hero p{max-width:46ch;margin-top:34px;color:var(--mist);font-size:18px;animation-delay:.7s}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:38px;animation-delay:.9s}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-size:15px;font-weight:400;border:1px solid var(--line);transition:all .4s cubic-bezier(.16,1,.3,1)}
+.btn.gold{background:var(--gold);color:#15110a;border-color:var(--gold)}
+.btn.gold:hover{box-shadow:0 0 36px rgba(207,178,122,.45);transform:translateY(-2px)}
+.btn.ghost:hover{border-color:var(--gold);color:var(--gold)}
+.pledge{margin-top:46px;font-size:14px;color:var(--mist);display:flex;gap:22px;flex-wrap:wrap;animation-delay:1.1s}
+.pledge span::before{content:"";display:inline-block;width:5px;height:5px;margin-right:9px;border-radius:50%;background:var(--gold);vertical-align:middle}
+
+/* orbit monogram */
+.orbit{position:relative;width:min(100%,430px);aspect-ratio:1;margin:0 auto;animation-delay:.5s}
+.ring{position:absolute;inset:0;border-radius:50%;border:1px solid var(--line)}
+.ring.r2{inset:15%;border-style:dashed;border-color:rgba(207,178,122,.25)}
+.spin{position:absolute;inset:0;animation:spin 60s linear infinite}
+.spin.rev{inset:15%;animation-duration:44s;animation-direction:reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.sat{position:absolute;top:50%;left:50%;width:54px;height:54px;margin:-27px;border-radius:16px;background:var(--ink);border:1px solid var(--line);display:grid;place-items:center;font-family:var(--serif);font-size:24px;color:var(--gold);overflow:hidden;transform:rotate(var(--a)) translateY(calc(var(--d) * -1)) rotate(calc(var(--a) * -1));box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.sat .in{position:absolute;inset:0;display:grid;place-items:center;animation:spin 60s linear infinite reverse}
+.spin.rev .sat .in{animation-duration:44s;animation-direction:reverse}
+.sat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.core{position:absolute;inset:34%;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#1b2842,var(--ink));border:1px solid rgba(207,178,122,.4);font-family:var(--serif);font-size:clamp(64px,9vw,104px);color:var(--gold);box-shadow:0 0 80px rgba(207,178,122,.18),inset 0 0 40px rgba(207,178,122,.08);animation:breathe 6s ease-in-out infinite}
+@keyframes breathe{50%{box-shadow:0 0 110px rgba(207,178,122,.3),inset 0 0 40px rgba(207,178,122,.12)}}
+
+/* sections */
+section{padding:clamp(80px,12vw,150px) 0;border-top:1px solid var(--line)}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(36px,5vw,68px);line-height:1.05;letter-spacing:-.015em;max-width:16ch}
+.lede{color:var(--mist);max-width:52ch;margin-top:22px;font-size:17px}
+
+/* app rows */
+.apps{margin-top:64px;border-top:1px solid var(--line)}
+.row{position:relative;display:grid;grid-template-columns:72px 1.1fr 1.6fr auto;align-items:center;gap:clamp(16px,3vw,40px);padding:34px 8px;border-bottom:1px solid var(--line);transition:padding .5s cubic-bezier(.16,1,.3,1),background .5s}
+.row::before{content:"";position:absolute;left:0;bottom:-1px;height:1px;width:0;background:var(--gold);transition:width .7s cubic-bezier(.16,1,.3,1)}
+.row:hover::before,.row:focus-visible::before{width:100%}
+.row:hover,.row:focus-visible{padding-left:26px;background:linear-gradient(90deg,var(--gold-soft),transparent 70%)}
+.ico{width:64px;height:64px;border-radius:18px;background:var(--ink);border:1px solid var(--line);display:grid;place-items:center;font-family:var(--serif);font-size:28px;color:var(--gold);position:relative;overflow:hidden}
+.ico img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.row h3{font-family:var(--serif);font-weight:400;font-size:clamp(30px,3.6vw,46px);line-height:1.1}
+.row h3 small{display:block;font-family:var(--sans);font-size:14px;color:var(--mist);margin-top:4px}
+.row p{color:var(--mist);font-size:15.5px;max-width:48ch}
+.tag{font-size:13px;padding:6px 14px;border-radius:999px;border:1px solid var(--line);color:var(--mist);white-space:nowrap}
+.tag.live{color:var(--gold);border-color:rgba(207,178,122,.5)}
+.more{margin-top:34px;color:var(--mist);font-size:15px}
+.more a{color:var(--gold);border-bottom:1px solid rgba(207,178,122,.4)}
+
+/* principles */
+.pr{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:64px;border:1px solid var(--line);border-radius:28px;overflow:hidden}
+.pr div{padding:clamp(28px,4vw,52px);background:linear-gradient(160deg,rgba(255,255,255,.025),transparent);border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .5s}
+.pr div:nth-child(2n){border-right:0}.pr div:nth-child(n+3){border-bottom:0}
+.pr div:hover{background:var(--gold-soft)}
+.pr h3{font-family:var(--serif);font-weight:400;font-size:32px;margin-bottom:12px}
+.pr p{color:var(--mist);max-width:38ch}
+
+/* about */
+.about{display:grid;grid-template-columns:auto 1fr;gap:clamp(30px,6vw,80px);align-items:center}
+.avatar{width:clamp(130px,20vw,240px);aspect-ratio:1;border-radius:50%;padding:6px;border:1px solid rgba(207,178,122,.5);background:var(--ink);display:grid;place-items:center;font-family:var(--serif);font-size:80px;color:var(--gold);position:relative;overflow:hidden}
+.avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px)}
+.about p{color:var(--mist);max-width:56ch;font-size:17px;margin-top:20px}
+
+/* closing */
+.end{text-align:center}
+.end h2{margin:0 auto;max-width:14ch}
+.end .lede{margin:22px auto 0}
+.end .cta{justify-content:center;opacity:1;animation:none}
+footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:34px 0 calc(34px + env(safe-area-inset-bottom,0px));color:var(--mist);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+footer a:hover{color:var(--gold)}
+footer nav2{display:flex;gap:22px}
+
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s ease,transform 1s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .hero{grid-template-columns:1fr;padding-top:110px}
+  .orbit{width:min(82%,340px);order:-1;margin-bottom:10px}
+  .row{grid-template-columns:56px 1fr;grid-template-areas:"i t" "p p" "g g"}
+  .row .ico{grid-area:i;width:56px;height:56px}.row .t{grid-area:t}.row p{grid-area:p}.row .tag{grid-area:g;justify-self:start}
+  .pr{grid-template-columns:1fr}.pr div{border-right:0!important;border-bottom:1px solid var(--line)!important}.pr div:last-child{border-bottom:0!important}
+  .about{grid-template-columns:1fr}
+  nav ul li:nth-child(3){display:none}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .hero h1 span b,.fade,.rv{opacity:1!important;transform:none!important}
+}
 </style>
 </head>
 <body>
-<header class="header"><div class="container nav"><a class="brand" href="#top"><img class="mark" src="https://avatars.githubusercontent.com/u/136808934?v=4" alt="SuBZeRo GitHub profile picture"><span>SuBZeRo<small>Q APPS</small></span></a><nav class="links"><a href="#apps">Apps</a><a href="#principles">Principles</a><a href="#about">About</a><a class="pill" href="https://github.com/Dr-SuBZeRo" target="_blank" rel="noopener">GitHub ↗</a></nav></div></header>
+<div class="glow" id="glow"></div><div class="grain"></div>
+
+<nav><div class="wrap">
+  <a class="brand" href="#top"><i></i>SuBZeRo</a>
+  <ul><li><a href="#apps">Apps</a></li><li><a href="#principles">Principles</a></li><li><a href="#about">About</a></li><li><a href="https://github.com/Dr-SuBZeRo">GitHub</a></li></ul>
+</div></nav>
+
 <main id="top">
-<section class="hero"><div class="container hero-grid"><div><div class="eyebrow"><span class="dot"></span>INDEPENDENT ANDROID DEVELOPER</div><h1>Useful software.<br><span class="gradient">Built with purpose.</span></h1><p class="lede">I build practical Android applications under the <b>Q Apps</b> family — designed to respect your privacy, work offline, and remain free to use.</p><div class="actions"><a class="btn primary" href="#apps">Explore Q Apps ↓</a><a class="btn secondary" href="https://github.com/Dr-SuBZeRo" target="_blank" rel="noopener">View GitHub ↗</a></div><div class="note">NO ADS. NO SUBSCRIPTIONS. NO UNNECESSARY ACCOUNTS.</div></div><div class="art" aria-label="Q Apps abstract brand mark"><div class="orbit"></div><div class="monogram">Q<span>+</span></div><div class="chip top">⌁ Privacy first</div><div class="chip bottom">↯ Offline ready</div></div></div></section>
-<section class="section dark" id="apps"><div class="container"><div class="heading"><div><div class="eyebrow">THE PRODUCT FAMILY</div><h2>Meet the <span class="gradient">Q Apps.</span></h2></div><p>A growing collection of focused tools for everyday work and life. Each project is developed independently and released when it is ready.</p></div><div class="cards">
-<article class="card feature"><div class="card-top"><img class="appicon appicon-image" src="https://raw.githubusercontent.com/Dr-SuBZeRo/MargiQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="MargiQ app icon" loading="lazy"><span class="status testing">Testing</span></div><h3>MargiQ</h3><p class="tagline">Profit &amp; margin calculator</p><p class="desc">A practical calculator for purchase cost, selling price, tax and profit margin — built for quick, clear calculations.</p><div class="tags"><span>Finance</span><span>INR</span><span>Android</span></div><a class="link" href="https://github.com/Dr-SuBZeRo/MargiQ">Explore repository ↗</a></article>
-<article class="card"><div class="card-top"><img class="appicon appicon-image" src="https://raw.githubusercontent.com/Dr-SuBZeRo/CashQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="CashQ app icon" loading="lazy"><span class="status">In development</span></div><h3>CashQ</h3><p class="tagline">Cash counting, made simple</p><p class="desc">An offline-first Indian rupee cash counter with denomination totals, saved counts and history.</p><div class="tags"><span>Utility</span><span>INR</span><span>Android</span></div><a class="link" href="https://github.com/Dr-SuBZeRo/CashQ">Explore repository ↗</a></article>
-<article class="card"><div class="card-top"><img class="appicon appicon-image" src="https://raw.githubusercontent.com/Dr-SuBZeRo/StockQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="StockQ app icon" loading="lazy"><span class="status">In development</span></div><h3>StockQ</h3><p class="tagline">Small business stock notebook</p><p class="desc">A focused workspace for inventory, purchases, supplier comparisons and everyday business records.</p><div class="tags"><span>Business</span><span>Inventory</span><span>Android</span></div><a class="link" href="https://github.com/Dr-SuBZeRo/StockQ">Explore repository ↗</a></article>
-<article class="card"><div class="card-top"><span class="appicon clinic" role="img" aria-label="ClinicQ icon">C</span><span class="status">In development</span></div><h3>ClinicQ</h3><p class="tagline">Clinic management toolkit</p><p class="desc">A clinic operations project focused on appointments, patient workflows and day-to-day administration.</p><div class="tags"><span>Healthcare</span><span>Productivity</span><span>Android</span></div><a class="link" href="https://github.com/Dr-SuBZeRo/ClinicQ">Explore repository ↗</a></article>
-<article class="card"><div class="card-top"><img class="appicon appicon-image" src="https://raw.githubusercontent.com/Dr-SuBZeRo/WalletQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="WalletQ app icon" loading="lazy"><span class="status">In development</span></div><h3>WalletQ</h3><p class="tagline">Personal money management</p><p class="desc">A privacy-focused personal finance app, designed around local-first money tracking.</p><div class="tags"><span>Finance</span><span>Privacy</span><span>Android</span></div><a class="link" href="https://github.com/Dr-SuBZeRo/WalletQ">Explore repository ↗</a></article>
-<article class="card"><div class="symbol">＋</div><h3>More tools, over time.</h3><p class="desc">Q Apps is an evolving collection. New projects will appear here as they become ready to share.</p><a class="link" href="https://github.com/Dr-SuBZeRo?tab=repositories">Browse all repositories ↗</a></article>
-</div><p class="footnote">Project status is indicative and may change. Follow each repository for current development and release information.</p></div></section>
-<section class="section" id="principles"><div class="container"><div class="heading"><div><div class="eyebrow">HOW I BUILD</div><h2>Technology with <span class="gradient">principles.</span></h2></div><p>Good software should solve a problem without creating unnecessary dependencies or taking more from people than it gives.</p></div><div class="principles">
-<article class="principle"><span class="num">01</span><div class="symbol">◈</div><h3>Privacy by design</h3><p>Collect as little as possible. Avoid tracking and unnecessary permissions. Keep personal data under the user's control.</p></article>
-<article class="principle"><span class="num">02</span><div class="symbol">⌁</div><h3>Offline first</h3><p>Core features should work without an internet connection wherever the product allows it.</p></article>
-<article class="principle"><span class="num">03</span><div class="symbol">∞</div><h3>Free to use</h3><p>No advertisements, subscriptions or in-app purchases. Useful tools should remain accessible.</p></article>
-<article class="principle"><span class="num">04</span><div class="symbol">⌘</div><h3>Open development</h3><p>Public repositories, transparent release notes and a clear path for feedback and contributions.</p></article>
-</div></div></section>
-<section class="section dark about" id="about"><div class="container about-grid"><div class="about-art"><div class="about-ring"></div><img class="about-avatar" src="https://avatars.githubusercontent.com/u/136808934?v=4" alt="SuBZeRo GitHub profile picture"></div><div><div class="eyebrow">BEHIND THE PROJECTS</div><h2>Built independently.<br><span class="gradient">Made for real use.</span></h2><p>I'm SuBZeRo, an independent developer building a small family of Android applications called Q Apps. My focus is on solving practical problems with clean interfaces, dependable engineering and respect for user privacy.</p><p>Development happens in the open. Source code, issue tracking and project updates are available through GitHub.</p><div class="actions"><a class="btn primary" href="https://github.com/Dr-SuBZeRo" target="_blank" rel="noopener">Connect on GitHub ↗</a></div></div></div></section>
-<section class="contact"><div class="container contact-box"><div><div class="eyebrow">FOLLOW THE WORK</div><h2>Have an idea or found an issue?</h2><p>Feedback, bug reports and thoughtful suggestions are welcome.</p></div><a class="btn light" href="https://github.com/Dr-SuBZeRo" target="_blank" rel="noopener">Visit GitHub ↗</a></div></section>
+<div class="wrap">
+  <header class="hero">
+    <div>
+      <h1><span><b>Useful software,</b></span><span><b>built with</b></span><span><b>quiet purpose.</b></span></h1>
+      <p class="fade">I’m an independent Android developer. My Q Apps respect your privacy, work offline and stay free to use.</p>
+      <div class="cta fade">
+        <a class="btn gold" href="#apps">Explore Q Apps</a>
+        <a class="btn ghost" href="https://github.com/Dr-SuBZeRo">View GitHub</a>
+      </div>
+      <div class="pledge fade"><span>No ads</span><span>No subscriptions</span><span>No unnecessary accounts</span></div>
+    </div>
+    <div class="orbit fade" aria-hidden="true">
+      <div class="ring"></div><div class="ring r2"></div>
+      <div class="spin">
+        <div class="sat" style="--a:0deg;--d:186px"><div class="in">M<img src="https://raw.githubusercontent.com/Dr-SuBZeRo/MargiQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="" onerror="this.remove()"></div></div>
+        <div class="sat" style="--a:120deg;--d:186px"><div class="in">C<img src="https://raw.githubusercontent.com/Dr-SuBZeRo/CashQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="" onerror="this.remove()"></div></div>
+        <div class="sat" style="--a:240deg;--d:186px"><div class="in">S<img src="https://raw.githubusercontent.com/Dr-SuBZeRo/StockQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="" onerror="this.remove()"></div></div>
+      </div>
+      <div class="spin rev">
+        <div class="sat" style="--a:60deg;--d:129px;width:46px;height:46px;margin:-23px"><div class="in">W<img src="https://raw.githubusercontent.com/Dr-SuBZeRo/WalletQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="" onerror="this.remove()"></div></div>
+        <div class="sat" style="--a:240deg;--d:129px;width:46px;height:46px;margin:-23px"><div class="in">C</div></div>
+      </div>
+      <div class="core">Q</div>
+    </div>
+  </header>
+</div>
+
+<section id="apps"><div class="wrap">
+  <h2 class="rv">Meet the Q Apps.</h2>
+  <p class="lede rv">Focused tools for everyday work and life. Each one is built independently and released when it’s ready.</p>
+  <div class="apps">
+    <a class="row rv" href="https://github.com/Dr-SuBZeRo/MargiQ">
+      <div class="ico">M<img src="https://raw.githubusercontent.com/Dr-SuBZeRo/MargiQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="MargiQ icon" onerror="this.remove()"></div>
+      <div class="t"><h3>MargiQ<small>Profit &amp; margin calculator</small></h3></div>
+      <p>Enter purchase cost, selling price and tax to see your profit margin at once.</p>
+      <span class="tag live">Testing</span>
+    </a>
+    <a class="row rv" href="https://github.com/Dr-SuBZeRo/CashQ">
+      <div class="ico">C<img src="https://raw.githubusercontent.com/Dr-SuBZeRo/CashQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="CashQ icon" onerror="this.remove()"></div>
+      <div class="t"><h3>CashQ<small>Indian rupee cash counter</small></h3></div>
+      <p>Count notes by denomination, save each count and review your history. Works offline.</p>
+      <span class="tag">In development</span>
+    </a>
+    <a class="row rv" href="https://github.com/Dr-SuBZeRo/StockQ">
+      <div class="ico">S<img src="https://raw.githubusercontent.com/Dr-SuBZeRo/StockQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="StockQ icon" onerror="this.remove()"></div>
+      <div class="t"><h3>StockQ<small>Small business stock notebook</small></h3></div>
+      <p>Track inventory, purchases and supplier prices in one place.</p>
+      <span class="tag">In development</span>
+    </a>
+    <a class="row rv" href="https://github.com/Dr-SuBZeRo/ClinicQ">
+      <div class="ico">C</div>
+      <div class="t"><h3>ClinicQ<small>Clinic management toolkit</small></h3></div>
+      <p>Manage appointments, patient workflows and daily clinic administration.</p>
+      <span class="tag">In development</span>
+    </a>
+    <a class="row rv" href="https://github.com/Dr-SuBZeRo/WalletQ">
+      <div class="ico">W<img src="https://raw.githubusercontent.com/Dr-SuBZeRo/WalletQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="WalletQ icon" onerror="this.remove()"></div>
+      <div class="t"><h3>WalletQ<small>Personal money management</small></h3></div>
+      <p>A local-first finance tracker that keeps your money data on your phone.</p>
+      <span class="tag">In development</span>
+    </a>
+  </div>
+  <p class="more rv">More tools will appear as they’re ready. <a href="https://github.com/Dr-SuBZeRo?tab=repositories">Browse all repositories</a>. Project status may change.</p>
+</div></section>
+
+<section id="principles"><div class="wrap">
+  <h2 class="rv">Technology with principles.</h2>
+  <p class="lede rv">Good software solves a problem without taking more from people than it gives.</p>
+  <div class="pr rv">
+    <div><h3>Privacy by design</h3><p>Collect as little as possible. No tracking, minimal permissions, and your data stays yours.</p></div>
+    <div><h3>Offline first</h3><p>Core features work without an internet connection wherever the product allows it.</p></div>
+    <div><h3>Free to use</h3><p>No advertisements, subscriptions or in-app purchases. Useful tools should stay accessible.</p></div>
+    <div><h3>Open development</h3><p>Public repositories, clear release notes and an open path for feedback and contributions.</p></div>
+  </div>
+</div></section>
+
+<section id="about"><div class="wrap about">
+  <div class="avatar rv">S<img src="https://avatars.githubusercontent.com/u/136808934?v=4" alt="SuBZeRo" onerror="this.remove()"></div>
+  <div class="rv">
+    <h2>Built independently. Made for real use.</h2>
+    <p>I’m SuBZeRo, an independent developer building a small family of Android apps called Q Apps. I focus on practical problems, clean interfaces and dependable engineering. Source code, issues and updates are all public on GitHub.</p>
+  </div>
+</div></section>
+
+<section class="end"><div class="wrap">
+  <h2 class="rv">Have an idea or found an issue?</h2>
+  <p class="lede rv">Bug reports, feature ideas and thoughtful suggestions are welcome.</p>
+  <div class="cta rv"><a class="btn gold" href="https://github.com/Dr-SuBZeRo">Open GitHub</a></div>
+</div></section>
 </main>
-<footer class="footer"><div class="container footer-main"><a class="brand" href="#top"><img class="mark" src="https://avatars.githubusercontent.com/u/136808934?v=4" alt="SuBZeRo GitHub profile picture"><span>SuBZeRo<small>Q APPS</small></span></a><p>Thoughtful software. Private by design. Free for everyone.</p><div class="footer-links"><a href="https://github.com/Dr-SuBZeRo">GitHub ↗</a><a href="privacy.html">Privacy</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> SuBZeRo. All rights reserved.</span><span>Independent developer · Q Apps</span></div></footer>
-<script>document.getElementById("year").textContent=new Date().getFullYear()</script>
-</body></html>
+
+<footer><div class="wrap">
+  <span>© 2026 SuBZeRo. Independent developer, Q Apps.</span>
+  <span style="display:flex;gap:22px"><a href="https://github.com/Dr-SuBZeRo">GitHub</a><a href="privacy.html">Privacy</a></span>
+</div></footer>
+
+<script>
+(function(){
+  var g=document.getElementById('glow');
+  addEventListener('pointermove',function(e){g.style.setProperty('--x',e.clientX+'px');g.style.setProperty('--y',e.clientY+'px')},{passive:true});
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
