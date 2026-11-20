@@ -110,7 +110,7 @@
       position: relative;
       z-index: 2;
       width: 100%;
-      max-width: 1180px;
+      max-width: 1320px;
       margin: 0 auto;
       padding: 0 clamp(20px, 5vw, 48px);
     }
@@ -225,15 +225,23 @@
     .hero {
       display: grid;
       min-height: 100svh;
-      grid-template-columns: 1.15fr .85fr;
+      grid-template-columns: minmax(0, 1.08fr) minmax(420px, .92fr);
       align-items: center;
-      gap: 40px;
-      padding: 120px 0 80px;
+      gap: clamp(48px, 6vw, 88px);
+      padding: calc(var(--nav-height) + 72px) 0 88px;
+    }
+    @media (min-width: 1025px) {
+      .hero { min-height: max(760px, 100svh); }
+      .hero-copy { max-width: 43ch; font-size: 19px; }
+      .pledge { gap: 14px 26px; font-size: 15px; }
+      .orbit { justify-self: end; }
+      .app-row { grid-template-columns: 80px 1.1fr 1.6fr auto; gap: clamp(24px, 3vw, 44px); padding: 38px 12px; }
+      .app-icon { width: 72px; height: 72px; flex-basis: 72px; }
     }
 
     .hero h1 {
       font-family: var(--serif);
-      font-size: clamp(46px, 7.4vw, 104px);
+      font-size: clamp(64px, 6.6vw, 100px);
       font-weight: 400;
       line-height: .98;
       letter-spacing: -.02em;
@@ -334,7 +342,7 @@
     /* Three-product orbit */
     .orbit {
       position: relative;
-      width: min(100%, 430px);
+      width: min(100%, 500px);
       aspect-ratio: 1;
       margin: 0 auto;
       container-type: inline-size;
@@ -360,8 +368,8 @@
     }
 
     .satellite {
-      --satellite-size: clamp(46px, 13.5cqw, 58px);
-      --satellite-distance: 36cqw;
+      --satellite-size: clamp(52px, 13.5cqw, 68px);
+      --satellite-distance: 37cqw;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -671,7 +679,7 @@
     }
     .reveal.is-visible { opacity: 1; transform: none; }
 
-    @media (max-width: 860px) {
+    @media (max-width: 1024px) {
       .hero {
         grid-template-columns: 1fr;
         gap: 24px;
@@ -679,7 +687,7 @@
       }
       .orbit {
         order: -1;
-        width: min(82%, 340px);
+        width: min(82%, 420px);
         margin-bottom: 8px;
       }
       .app-row {
