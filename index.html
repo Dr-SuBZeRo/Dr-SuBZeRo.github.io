@@ -171,7 +171,10 @@
       color: var(--gold);
       font-family: var(--serif);
       font-size: 21px;
+      opacity: 0;
+      pointer-events: none;
     }
+    .brand-avatar.show-fallback .brand-avatar-fallback { opacity: 1; }
 
     .nav-links {
       display: flex;
@@ -383,7 +386,10 @@
       color: var(--gold);
       font-family: var(--serif);
       font-size: 25px;
+      opacity: 0;
+      pointer-events: none;
     }
+    .satellite.show-fallback span { opacity: 1; }
     .satellite img {
       position: relative;
       z-index: 1;
@@ -397,18 +403,50 @@
     .orbit-core {
       position: absolute;
       inset: 34%;
-      overflow: hidden;
+      overflow: visible;
       border: 1px solid rgba(90, 170, 255, .55);
       border-radius: 50%;
       background: #03132f;
       box-shadow: 0 0 80px rgba(0, 140, 255, .2), inset 0 0 36px rgba(0, 140, 255, .12);
       animation: breathe 6s ease-in-out infinite;
+      isolation: isolate;
+    }
+    .orbit-core::before {
+      position: absolute;
+      z-index: -1;
+      inset: -11%;
+      border: 1px solid rgba(0, 210, 255, .55);
+      border-right-color: transparent;
+      border-bottom-color: rgba(0, 125, 255, .15);
+      border-radius: 50%;
+      content: "";
+      animation: logo-orbit 12s linear infinite;
+    }
+    .orbit-core::after {
+      position: absolute;
+      z-index: -2;
+      inset: -20%;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 153, 255, .18), transparent 68%);
+      content: "";
+      animation: logo-halo 4s ease-in-out infinite;
     }
     .orbit-core img {
       display: block;
       width: 100%;
       height: 100%;
+      border-radius: 50%;
       object-fit: cover;
+      animation: logo-float 5s ease-in-out infinite;
+      transform-origin: center;
+    }
+    @keyframes logo-orbit { to { transform: rotate(360deg); } }
+    @keyframes logo-halo {
+      50% { opacity: .55; transform: scale(1.12); }
+    }
+    @keyframes logo-float {
+      0%, 100% { transform: scale(.97); }
+      50% { transform: scale(1.035); }
     }
 
     /* Shared sections */
@@ -481,7 +519,16 @@
       color: var(--gold);
       font-family: var(--serif);
       font-size: 28px;
+      flex: 0 0 64px;
     }
+    .app-icon > span {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      opacity: 0;
+    }
+    .app-icon.show-fallback > span { opacity: 1; }
     .app-icon img {
       position: absolute;
       inset: 0;
@@ -489,6 +536,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transform: scale(1.04);
     }
 
     .app-title {
@@ -595,6 +643,14 @@
       border-radius: 50%;
       object-fit: cover;
     }
+    .avatar-fallback {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      opacity: 0;
+    }
+    .avatar.show-fallback .avatar-fallback { opacity: 1; }
     .about-copy p {
       max-width: 56ch;
       margin-top: 20px;
@@ -650,7 +706,7 @@
         gap: 16px;
         padding: 26px 8px;
       }
-      .app-icon { grid-area: icon; width: 56px; height: 56px; }
+      .app-icon { grid-area: icon; width: 56px; height: 56px; flex-basis: 56px; }
       .app-heading { grid-area: title; }
       .app-description { grid-area: description; }
       .status { grid-area: status; }
@@ -736,7 +792,7 @@
       <a class="brand" href="#top" aria-label="SuBZeRo home">
         <span class="brand-avatar" aria-hidden="true">
           <span class="brand-avatar-fallback">S</span>
-          <img src="https://avatars.githubusercontent.com/u/136808934?v=4" alt="" width="36" height="36" decoding="async" onerror="this.remove()">
+          <img src="https://avatars.githubusercontent.com/u/136808934?v=4" alt="" width="36" height="36" decoding="async" onerror="this.remove();this.parentElement.classList.add('show-fallback')">
         </span>
         SuBZeRo
       </a>
@@ -792,15 +848,15 @@
           <div class="orbit-spin">
             <div class="satellite" style="--angle: 0deg">
               <span>M</span>
-              <img src="https://raw.githubusercontent.com/Dr-SuBZeRo/MargiQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="" width="58" height="58" onerror="this.remove()">
+              <img src="https://raw.githubusercontent.com/Dr-SuBZeRo/MargiQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="" width="58" height="58" onerror="this.remove();this.parentElement.classList.add('show-fallback')">
             </div>
             <div class="satellite" style="--angle: 120deg">
               <span>C</span>
-              <img src="https://raw.githubusercontent.com/Dr-SuBZeRo/CashQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="" width="58" height="58" onerror="this.remove()">
+              <img src="https://raw.githubusercontent.com/Dr-SuBZeRo/CashQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="" width="58" height="58" onerror="this.remove();this.parentElement.classList.add('show-fallback')">
             </div>
             <div class="satellite" style="--angle: 240deg">
               <span>W</span>
-              <img src="https://raw.githubusercontent.com/Dr-SuBZeRo/WalletQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="" width="58" height="58" onerror="this.remove()">
+              <img src="https://raw.githubusercontent.com/Dr-SuBZeRo/WalletQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="" width="58" height="58" onerror="this.remove();this.parentElement.classList.add('show-fallback')">
             </div>
           </div>
           <div class="orbit-core"><img src="/assets/q-apps-logo.svg" alt="Q Apps by SuBZeRo" width="140" height="140" loading="eager" decoding="async"></div>
@@ -818,8 +874,8 @@
         <div class="apps">
           <a class="app-row reveal" href="https://github.com/Dr-SuBZeRo/MargiQ" target="_blank" rel="noopener noreferrer" aria-label="MargiQ — view GitHub repository">
             <div class="app-icon">
-              M
-              <img src="https://raw.githubusercontent.com/Dr-SuBZeRo/MargiQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="" width="64" height="64" loading="lazy" decoding="async" onerror="this.remove()">
+              <span>M</span>
+              <img src="https://raw.githubusercontent.com/Dr-SuBZeRo/MargiQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="" width="64" height="64" loading="lazy" decoding="async" onerror="this.remove();this.parentElement.classList.add('show-fallback')">
             </div>
             <div class="app-heading">
               <h3 class="app-title">MargiQ<small>Profit &amp; margin calculator</small></h3>
@@ -832,8 +888,8 @@
 
           <a class="app-row reveal" href="https://github.com/Dr-SuBZeRo/CashQ" target="_blank" rel="noopener noreferrer" aria-label="CashQ — view GitHub repository">
             <div class="app-icon">
-              C
-              <img src="https://raw.githubusercontent.com/Dr-SuBZeRo/CashQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="" width="64" height="64" loading="lazy" decoding="async" onerror="this.remove()">
+              <span>C</span>
+              <img src="https://raw.githubusercontent.com/Dr-SuBZeRo/CashQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="" width="64" height="64" loading="lazy" decoding="async" onerror="this.remove();this.parentElement.classList.add('show-fallback')">
             </div>
             <div class="app-heading">
               <h3 class="app-title">CashQ<small>Indian rupee cash counter</small></h3>
@@ -846,8 +902,8 @@
 
           <a class="app-row reveal" href="https://github.com/Dr-SuBZeRo/WalletQ" target="_blank" rel="noopener noreferrer" aria-label="WalletQ — view GitHub repository">
             <div class="app-icon">
-              W
-              <img src="https://raw.githubusercontent.com/Dr-SuBZeRo/WalletQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="" width="64" height="64" loading="lazy" decoding="async" onerror="this.remove()">
+              <span>W</span>
+              <img src="https://raw.githubusercontent.com/Dr-SuBZeRo/WalletQ/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" alt="" width="64" height="64" loading="lazy" decoding="async" onerror="this.remove();this.parentElement.classList.add('show-fallback')">
             </div>
             <div class="app-heading">
               <h3 class="app-title">WalletQ<small>Personal finance management</small></h3>
@@ -897,8 +953,8 @@
     <section id="about" aria-labelledby="about-heading">
       <div class="wrap about">
         <div class="avatar reveal">
-          S
-          <img src="https://avatars.githubusercontent.com/u/136808934?v=4" alt="" width="228" height="228" loading="lazy" decoding="async" onerror="this.remove()">
+          <span class="avatar-fallback">S</span>
+          <img src="https://avatars.githubusercontent.com/u/136808934?v=4" alt="" width="228" height="228" loading="lazy" decoding="async" onerror="this.remove();this.parentElement.classList.add('show-fallback')">
         </div>
         <div class="about-copy reveal">
           <h2 id="about-heading">Built independently. Made for real use.</h2>
